@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Christ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="newreg.xsd">
+
+  <computer-science>
+    <stu-name>Divya</stu-name>
+    <stu-university>Delhi</stu-university>
+    <stu-phone>9667609376</stu-phone>
+    <stu-email>prasad18@christuniversity.in</stu-email>
+   
+  </computer-science>
+
+
+   <computer-science>
+    <stu-name>Dhruv</stu-name>
+    <stu-university>Delhi</stu-university>
+    <stu-phone>8667609376</stu-phone>
+    <stu-email>abc8@delhiuniversity.in</stu-email>
+   
+  </computer-science>
+
+  
+  
+ </Christ>

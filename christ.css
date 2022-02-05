@@ -1,0 +1,115 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    margin-right: 0;
+    width: 100%;
+    position: relative ;
+
+}
+
+*{
+  margin: 0;
+  padding: 0;
+
+}
+
+.main-text{
+  
+  text-align: center;
+  color: aliceblue;
+}
+
+h1{
+  margin-top: 25px;
+  text-align: center;
+  margin-left: 15%;
+
+}
+
+h4{
+  margin-left: 15%;
+}
+p{
+  color: black;
+}
+
+
+
+.main-text{
+  display: inline;
+  
+}
+
+.section{
+  height: 430px;
+}
+
+
+p{
+  font-family: serif;
+}
+
+marquee{
+  margin-top: 5px;
+  color: aliceblue;
+  background: #111E80;
+
+  ;}
+  .form-popup{
+    width:450px;
+    padding:30px;
+    margin:40px auto;
+    background: #FFF;
+    
+   
+  }
+  .form-popup .inner-wrap{
+    
+    background: #F8F8F8;
+    border-radius: 6px;
+    margin-bottom: 0px;
+  }
+  .form-popup h1{
+    background: #111E80;
+    padding: 20px 30px 15px 30px;
+    margin: -30px -30px 30px -30px;
+   
+  
+    color: #fff;
+   
+    border: 1px solid #111E80;
+  }
+ 
+ 
+  .form-popup input[type="text"],
+  .form-popup input[type="email"],
+  .form-popup input[type="number"],
+  .form-popup input[type="password"],
+  .form-popup textarea,
+  .form-popup select {
+    display: block;
+    box-sizing: border-box;
+
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+   
+    border: 2px solid #fff;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
+    -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
+    -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
+  }
+  
+  .form-popup .section{
+    font: normal 20px 'Bitter', serif;
+    color: #111E80;
+    margin-bottom: 5px;
+  }
+  
+  
+
+  
+  
+.section{
+  height: 0px;
+}

@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link  href="christ.css" rel="stylesheet">
+
+
+    <script>
+    var span=document.getElementsByTagName("span");
+
+
+
+
+
+      function validate()
+      { 
+          
+      var a =  document.getElementById("name").value;
+      var b = document.getElementById("email").value;
+      var c =document.getElementById("phone").value;
+      var d = document.getElementById("pass").value;
+      var e= document.getElementById("age").value;
+      
+      if((a == null || a == "") && (b == null || b == "") && (c == null || c == "") && (d == null || d == "") && (e == null || e == ""))
+      {             
+      
+      
+      span[1].innerText="Blank name";
+      document.getElementById("name").style.border="1.5px red solid";
+      span[2].innerText="Blank age";
+      document.getElementById("age").style.border="1.5px red solid";
+      span[3].innerText="Blank email";
+      document.getElementById("email").style.border="1.5px red solid";
+      span[4].innerText="Blank phone number";
+      document.getElementById("phone").style.border="1.5px red solid";
+      span[5].innerText="Blank password";
+      document.getElementById("pass").style.border="1.5px red solid";
+      
+      
+      return false;   
+      
+      
+      }
+      else
+      allLetter();
+      validateEmail();
+      validateage();
+      password();
+      validatePhone(); 
+      
+      }
+      
+     
+      
+
+
+
+      function validateage() {
+
+
+var user = document.getElementById("age").value;
+    var user2 = document.getElementById("age");
+    var re =/^-\d+$/;
+
+if (user == "") 
+    {
+    span[2].innerText="Blank age***";
+    user2.style.border="3px red solid";
+    //alert("Email must be filled out");
+    return false;
+    }
+    
+    
+    if (re.test(user)) {
+      span[2].innerText="Incorrect age";
+    user2.style.border="3px red solid";
+    return false;
+    }
+    else {
+      span[2].innerText = 'Valid';
+    
+    user2.style.border="3px green solid";
+    
+    return true;
+    
+    }
+}
+
+
+      function validateEmail() {
+      
+      var user = document.getElementById("email").value;
+      var user2 = document.getElementById("email");
+      var re = /^\w+([\.-]?\w+)*@(christuniversity.in|delhiuniversity.in|jainuniversity.in)/;
+      
+      
+      if (user == "") 
+      {
+      span[3].innerText="Blank email***";
+      user2.style.border="3px red solid";
+      //alert("Email must be filled out");
+      return false;
+      }
+      
+      
+      if (re.test(user)) {
+      span[3].innerText = 'Valid';
+      
+      user2.style.border="3px green solid";
+      
+      return true;
+      }
+      else {
+      
+      span[3].innerText="Incorrect Email id";
+      user2.style.border="3px red solid";
+      return false;
+      }
+      }
+              
+              
+              
+          function validatePhone() {
+               
+          var user = document.getElementById("phone").value;
+          var user2 = document.getElementById("phone");
+          var re = /^[7-9][0-9]{9}$/;
+      
+      
+          if (user == "") {
+                        
+                          
+                          span[4].innerText="Blank phone number***";
+                          user2.style.border="3px red solid";
+                          //alert("Email must be filled out");
+                          return false;
+                         
+                          } 
+                if (re.test(user) & user.length ==10) 
+                {
+                  span[4].innerText = 'Valid';
+                              
+                   user2.style.border="3px green solid";
+                  
+                    
+                    return true;
+                  }
+      
+                  
+                else {
+              
+                    user2.style.border = "red solid 3px";
+                    span[4].innerText="Phone no should be of 10 digits";
+                    
+                    return false;
+                } }
+      
+
+
+
+
+
+
+          function allLetter()
+          {
+          var user = document.getElementById("name").value;
+          var user2 = document.getElementById("name");
+          var re = /^[A-Z][a-zA-Z ]*$/;
+          
+          if (user == "") {span[1].innerText="Blank name***";
+                          user2.style.border="2px red solid";
+                         
+                          return false;
+                          } 
+          if (re.test(user) ) {
+              span[1].innerText = 'Valid';
+                              
+                              user2.style.border="3px green solid";
+                  
+                
+                 
+              }
+          else {    
+                    user2.style.border = "red solid 3px";
+                    span[1].innerText=" First letter capital /Name should contain only alphabets";
+                    return false;
+                  
+              }
+      
+             
+             }
+          
+          
+      function password()
+      { 
+      var user = document.getElementById("pass").value;
+      var user2 = document.getElementById("pass");
+      
+      var re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,20})/;
+      if (user == "" || user == null)
+      {
+      span[5].innerText="Blank password***";
+      user2.style.border="3px red solid";
+      return false;
+      } 
+      else if(re.test(user.trim()))
+      {
+      if(user.trim().length >= 8 && user.trim().length <= 15)
+      {
+      span[5].innerText="Strong password***";
+      user2.style.border = "3px green solid";
+      return true;
+      }
+      else if(user.trim().length > 15)
+      {
+      span[5].innerText = "Too long password***";
+      user2.style.border = "4px yellow solid";
+      return false;
+      }
+      }
+      else
+      {
+      span[5].innerText="Weak Password***";
+      user2.style.border = "4px green solid";
+      return false;
+      }
+      
+      }
+      
+      
+       
+        
+      
+      function test(event)
+      {
+      let code=event.which;
+      if(code>47&&code<58)
+      
+      return false;
+      else
+      return true;
+      
+      }
+      function test2(event)
+      {
+      let code=event.which;
+      if(code>64&&code<91)
+      
+      return false;
+      else
+      return true;
+      
+      }</script>
+</head>
+<body onload="loadXML()">
+
+<style>
+
+body{
+background: #111E80;  
+background: -webkit-linear-gradient(to left, #4A00E0, #111E80);  
+
+}
+
+
+
+
+.container {
+  position: absolute;
+  margin-top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+
+table {
+  width: 900px;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+th,
+td {
+  padding: 15px;
+  background-color: rgba(255,255,255,0.2);
+  color: #fff;
+  text-align: center;
+}
+
+th {
+  text-align: center;
+}
+
+th{
+
+
+    background: #111E80  ;  
+   border: #111E80 solid;   
+}
+
+.button-30 {
+  align-items: center;
+  appearance: none;
+  
+  background-color: #FCFCFD;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+.button-30:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.button-30:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-30:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+
+*{box-sizing: border-box;}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+
+/* The popup form - hidden by default */
+.form-popup{
+  display: none;
+  position: fixed;
+  bottom: 0;
+  margin-top: 30%;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+
+}
+
+
+.form-container .btn {
+  background-color: blue;
+  color: white;
+ 
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:5px;
+  opacity: 0.8;
+}
+
+
+              
+
+</style> 
+
+<div class="container" style="margin-top:170px ;">
+   
+    <table id="table"></table>
+
+<button class="button-30" role="button" style=" margin:auto; display:block; margin-top: 15px; font-family: Georgia, 'Times New Roman', Times, serif; text-decoration: none;" onclick="openForm()" >ADD</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="form-popup" id="form_popup" >
+  <form  class="form-container"  id="addRecordForm"  >
+    
+    <h1>Registration Form</h1>
+   
+    <div class="section"><span></span></div>
+        <div class="inner-wrap" >
+            <label> <input type="text" name="field1" id=name placeholder="Your Name" onkeyup="allLetter()" onkeydown=" return test(event)" /><span style="color: black; font-size: small;"></span></label><br>
+            <label> <input type="text"name="field2" placeholder="Your University"></textarea></label><br>
+        </div>
+            <div class="section"></div>
+            <div class="inner-wrap">
+          <label><input type="text" id="age" placeholder="Your age" onkeyup="validateage()"onkeydown=" return test2(event)"/><span style="color: black;font-size: small;"></span></label><br>
+         </div>
+
+          <div class="section"></div>
+          <div class="inner-wrap">
+            <label> <input type="email" name="field3" id="email" placeholder="Your Email-id" onkeyup="validateEmail()"/><span style="color: black;font-size: small;"></span></label><br>
+            <label><input type="text" name="field4" id="phone" placeholder="Your Phone no" onkeyup="validatePhone()"onkeydown=" return test2(event)"/><span style="color: black;font-size: small;"></span></label><br>
+        </div>
+            <div class="section"></div>
+            <div class="inner-wrap">
+          
+            <label ><input type="password" name="field5" id="pass" placeholder="Enter Password" onkeyup="password()"/><span style="color: black;font-size: small;"></span></label><br>
+          </div>
+        
+
+    
+
+    <button type="submit" class="btn"  onclick="validate();return false;addNewRecord()">ADD</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+ 
+</div>
+
+  
+<script src="./regjs.js"></script>
+
+</body>
+</html>
