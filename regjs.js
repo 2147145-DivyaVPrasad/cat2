@@ -65,7 +65,7 @@ function addNewRecord()
     var i
     var details = []
     var x = document.getElementById("addRecordForm")
-    var Patient = xmlDoc.createElement("computer-science")
+    var computer-science = xmlDoc.createElement("computer-science")
     details[0] = xmlDoc.createElement("stu-name")
     details[1] = xmlDoc.createElement("stu-university")
     details[2] = xmlDoc.createElement("stu-phone")
